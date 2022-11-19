@@ -1,9 +1,14 @@
-const removeFromArray = function(givenArray,deleteIt) {
-
-    const index = givenArray.indexOf(deleteIt);
-    if (index > -1) { // only splice array when item is found
-        givenArray.splice(index, 1); // 2nd parameter means remove one item only
+function removeFromArray(givenArray,deleteIt) {
+    for(let i = 1 ; i<arguments.length ; i++){
+        const removeThis = arguments[i]
+        for(let i = 0 ; i < givenArray.length ; i++){
+            const toRemove = givenArray.indexOf(removeThis)
+            if(givenArray[i] === removeThis){
+                givenArray.splice(toRemove,1)
+            }
+        }
     }
+
     return givenArray
 };
 
