@@ -1,11 +1,13 @@
 const ftoc = function(value) {
   const toRound = (value - 32) * 5/9
-  return Math.round(toRound)
+  const returnIt = Math.round(toRound * 10) /10
+  return returnIt
 };
 
 const ctof = function(value) {
   const toRound = (value * 9/5) + 32
-  return Math.round(toRound)
+  const returnItTwo = Math.round(toRound * 10) /10
+  return returnItTwo
 };
 
 // Do not edit below this line
